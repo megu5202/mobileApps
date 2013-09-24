@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A148918217F1E03500AFE8E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A148918117F1E03500AFE8E0 /* UIKit.framework */; };
+		A148918417F1E03500AFE8E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A148918317F1E03500AFE8E0 /* Foundation.framework */; };
+		A148918617F1E03500AFE8E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A148918517F1E03500AFE8E0 /* CoreGraphics.framework */; };
+		A148918C17F1E03500AFE8E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A148918A17F1E03500AFE8E0 /* InfoPlist.strings */; };
+		A148918E17F1E03500AFE8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A148918D17F1E03500AFE8E0 /* main.m */; };
+		A148919217F1E03500AFE8E0 /* MADAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A148919117F1E03500AFE8E0 /* MADAppDelegate.m */; };
+		A148919417F1E03500AFE8E0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A148919317F1E03500AFE8E0 /* Default.png */; };
+		A148919617F1E03500AFE8E0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A148919517F1E03500AFE8E0 /* Default@2x.png */; };
+		A148919817F1E03500AFE8E0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A148919717F1E03500AFE8E0 /* Default-568h@2x.png */; };
+		A148919B17F1E03500AFE8E0 /* MADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A148919A17F1E03500AFE8E0 /* MADViewController.m */; };
+		A148919E17F1E03500AFE8E0 /* MADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A148919C17F1E03500AFE8E0 /* MADViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A148917E17F1E03500AFE8E0 /* Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Browser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A148918117F1E03500AFE8E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A148918317F1E03500AFE8E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A148918517F1E03500AFE8E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A148918917F1E03500AFE8E0 /* Browser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Browser-Info.plist"; sourceTree = "<group>"; };
+		A148918B17F1E03500AFE8E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A148918D17F1E03500AFE8E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A148918F17F1E03500AFE8E0 /* Browser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Browser-Prefix.pch"; sourceTree = "<group>"; };
+		A148919017F1E03500AFE8E0 /* MADAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MADAppDelegate.h; sourceTree = "<group>"; };
+		A148919117F1E03500AFE8E0 /* MADAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MADAppDelegate.m; sourceTree = "<group>"; };
+		A148919317F1E03500AFE8E0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A148919517F1E03500AFE8E0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A148919717F1E03500AFE8E0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A148919917F1E03500AFE8E0 /* MADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MADViewController.h; sourceTree = "<group>"; };
+		A148919A17F1E03500AFE8E0 /* MADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MADViewController.m; sourceTree = "<group>"; };
+		A148919D17F1E03500AFE8E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MADViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A148917B17F1E03500AFE8E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A148918217F1E03500AFE8E0 /* UIKit.framework in Frameworks */,
+				A148918417F1E03500AFE8E0 /* Foundation.framework in Frameworks */,
+				A148918617F1E03500AFE8E0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A148917517F1E03500AFE8E0 = {
+			isa = PBXGroup;
+			children = (
+				A148918717F1E03500AFE8E0 /* Browser */,
+				A148918017F1E03500AFE8E0 /* Frameworks */,
+				A148917F17F1E03500AFE8E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A148917F17F1E03500AFE8E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A148917E17F1E03500AFE8E0 /* Browser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A148918017F1E03500AFE8E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A148918117F1E03500AFE8E0 /* UIKit.framework */,
+				A148918317F1E03500AFE8E0 /* Foundation.framework */,
+				A148918517F1E03500AFE8E0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A148918717F1E03500AFE8E0 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				A148919017F1E03500AFE8E0 /* MADAppDelegate.h */,
+				A148919117F1E03500AFE8E0 /* MADAppDelegate.m */,
+				A148919917F1E03500AFE8E0 /* MADViewController.h */,
+				A148919A17F1E03500AFE8E0 /* MADViewController.m */,
+				A148919C17F1E03500AFE8E0 /* MADViewController.xib */,
+				A148918817F1E03500AFE8E0 /* Supporting Files */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
+		A148918817F1E03500AFE8E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A148918917F1E03500AFE8E0 /* Browser-Info.plist */,
+				A148918A17F1E03500AFE8E0 /* InfoPlist.strings */,
+				A148918D17F1E03500AFE8E0 /* main.m */,
+				A148918F17F1E03500AFE8E0 /* Browser-Prefix.pch */,
+				A148919317F1E03500AFE8E0 /* Default.png */,
+				A148919517F1E03500AFE8E0 /* Default@2x.png */,
+				A148919717F1E03500AFE8E0 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A148917D17F1E03500AFE8E0 /* Browser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A14891A117F1E03500AFE8E0 /* Build configuration list for PBXNativeTarget "Browser" */;
+			buildPhases = (
+				A148917A17F1E03500AFE8E0 /* Sources */,
+				A148917B17F1E03500AFE8E0 /* Frameworks */,
+				A148917C17F1E03500AFE8E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Browser;
+			productName = Browser;
+			productReference = A148917E17F1E03500AFE8E0 /* Browser.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A148917617F1E03500AFE8E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MAD;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Melissa;
+			};
+			buildConfigurationList = A148917917F1E03500AFE8E0 /* Build configuration list for PBXProject "Browser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A148917517F1E03500AFE8E0;
+			productRefGroup = A148917F17F1E03500AFE8E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A148917D17F1E03500AFE8E0 /* Browser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A148917C17F1E03500AFE8E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A148918C17F1E03500AFE8E0 /* InfoPlist.strings in Resources */,
+				A148919417F1E03500AFE8E0 /* Default.png in Resources */,
+				A148919617F1E03500AFE8E0 /* Default@2x.png in Resources */,
+				A148919817F1E03500AFE8E0 /* Default-568h@2x.png in Resources */,
+				A148919E17F1E03500AFE8E0 /* MADViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A148917A17F1E03500AFE8E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A148918E17F1E03500AFE8E0 /* main.m in Sources */,
+				A148919217F1E03500AFE8E0 /* MADAppDelegate.m in Sources */,
+				A148919B17F1E03500AFE8E0 /* MADViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A148918A17F1E03500AFE8E0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A148918B17F1E03500AFE8E0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A148919C17F1E03500AFE8E0 /* MADViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A148919D17F1E03500AFE8E0 /* en */,
+			);
+			name = MADViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A148919F17F1E03500AFE8E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A14891A017F1E03500AFE8E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A14891A217F1E03500AFE8E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Browser/Browser-Prefix.pch";
+				INFOPLIST_FILE = "Browser/Browser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A14891A317F1E03500AFE8E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Browser/Browser-Prefix.pch";
+				INFOPLIST_FILE = "Browser/Browser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A148917917F1E03500AFE8E0 /* Build configuration list for PBXProject "Browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A148919F17F1E03500AFE8E0 /* Debug */,
+				A14891A017F1E03500AFE8E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A14891A117F1E03500AFE8E0 /* Build configuration list for PBXNativeTarget "Browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A14891A217F1E03500AFE8E0 /* Debug */,
+				A14891A317F1E03500AFE8E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A148917617F1E03500AFE8E0 /* Project object */;
+}
