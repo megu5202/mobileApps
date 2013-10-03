@@ -1,6 +1,12 @@
-Your project plan should include the following:
+I will be making an app that will calculate a persons Blood Alcohol Content based 
+on how many drinks they had, their gender, weight, and how long ago they started drinking.
 
-description of your project
-pseudocode for algorithms and program flow
-visual design template or example
-brief description of how you will test your project
+There will be 4 text entry blocks for gender, weight, # of drinks, and how long ago 
+they stared drinking
+There will be one label that gives the current BAC
+
+I will test the app by entering in different drinks, hours, weights and genders and
+comparing the results to basic BAC graph data.
+
+If this doesn't take too long I will try to change the equation so that you can enter
+a time for each drink, so that the decay of BAC over time is more accurate.
