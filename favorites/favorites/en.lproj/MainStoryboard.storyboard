@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="MADViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Favorite Books" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sl-70-eY6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="FaH-x4-hvP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhX-vx-I9F">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rUG-ab-dPx"/>
+                                    <barButtonItem title="Info" id="Zwv-te-2iP">
+                                        <connections>
+                                            <segue destination="3EV-fO-rCx" kind="modal" identifier="favInfo" id="4jF-Tt-GYX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkF-Ur-pHU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hNS-S4-qgo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swe-nd-H1r">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VrX-pE-gIO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="swe-nd-H1r" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="709-o4-cyv"/>
+                            <constraint firstAttribute="bottom" secondItem="swe-nd-H1r" secondAttribute="bottom" constant="243" id="7nz-6H-h9w"/>
+                            <constraint firstItem="4Sl-70-eY6" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JgC-uw-XLZ"/>
+                            <constraint firstItem="nkF-Ur-pHU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="194" id="ULH-bd-JoZ"/>
+                            <constraint firstAttribute="trailing" secondItem="swe-nd-H1r" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UP3-xs-hLO"/>
+                            <constraint firstItem="NhX-vx-I9F" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="Xk3-rE-jzD"/>
+                            <constraint firstItem="NhX-vx-I9F" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="aw7-4W-Meb"/>
+                            <constraint firstItem="4Sl-70-eY6" firstAttribute="top" secondItem="3" secondAttribute="top" constant="68" id="dBc-MR-Iwp"/>
+                            <constraint firstItem="NhX-vx-I9F" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="hlb-ot-DYq"/>
+                            <constraint firstAttribute="trailing" secondItem="4Sl-70-eY6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mDU-V6-TW3"/>
+                            <constraint firstAttribute="trailing" secondItem="nkF-Ur-pHU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mN6-je-NaB"/>
+                            <constraint firstItem="nkF-Ur-pHU" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rnO-1v-Y0t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="swe-nd-H1r" id="dem-fj-RKQ"/>
+                        <outlet property="bookLabel" destination="nkF-Ur-pHU" id="8Vl-Y5-z68"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="91"/>
+        </scene>
+        <!--Scene2 View Controller-->
+        <scene sceneID="Qwo-Pl-MaC">
+            <objects>
+                <viewController id="3EV-fO-rCx" customClass="Scene2ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z9h-vE-Ujy">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="My Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhZ-Vq-SGP">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbH-1b-Wib">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="S5j-Bn-0MC"/>
+                                    <barButtonItem title="Done" id="dzY-f9-wLO">
+                                        <connections>
+                                            <segue destination="ljz-Xb-cDM" kind="unwind" identifier="doneFavs" unwindAction="returned:" id="VUh-gd-4wp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Favorite Book" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qi-Px-z1C">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Favorite Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNX-qs-P50">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YqJ-No-zhK">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Dv-lX-cZy">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kNX-qs-P50" firstAttribute="leading" secondItem="z9h-vE-Ujy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3xy-jD-aIf"/>
+                            <constraint firstAttribute="trailing" secondItem="2Dv-lX-cZy" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4xm-Rq-o1R"/>
+                            <constraint firstItem="tbH-1b-Wib" firstAttribute="top" secondItem="z9h-vE-Ujy" secondAttribute="top" type="default" id="7hi-2e-mhL"/>
+                            <constraint firstAttribute="trailing" secondItem="YqJ-No-zhK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="C51-2f-CEN"/>
+                            <constraint firstItem="tbH-1b-Wib" firstAttribute="centerX" secondItem="QhZ-Vq-SGP" secondAttribute="centerX" type="default" id="Cfn-cy-ZID"/>
+                            <constraint firstItem="QhZ-Vq-SGP" firstAttribute="top" secondItem="z9h-vE-Ujy" secondAttribute="top" constant="61" id="JDi-7v-YP3"/>
+                            <constraint firstItem="tbH-1b-Wib" firstAttribute="trailing" secondItem="z9h-vE-Ujy" secondAttribute="trailing" type="default" id="Pdx-D1-N4A"/>
+                            <constraint firstItem="tbH-1b-Wib" firstAttribute="leading" secondItem="z9h-vE-Ujy" secondAttribute="leading" type="default" id="YRb-RL-zzp"/>
+                            <constraint firstItem="kNX-qs-P50" firstAttribute="top" secondItem="YqJ-No-zhK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gLs-vc-Tu7"/>
+                            <constraint firstItem="YqJ-No-zhK" firstAttribute="top" secondItem="9qi-Px-z1C" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lhx-3m-YTQ"/>
+                            <constraint firstItem="9qi-Px-z1C" firstAttribute="leading" secondItem="z9h-vE-Ujy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="n0A-Bb-PWe"/>
+                            <constraint firstItem="2Dv-lX-cZy" firstAttribute="top" secondItem="kNX-qs-P50" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oma-MO-5Tr"/>
+                            <constraint firstItem="9qi-Px-z1C" firstAttribute="top" secondItem="z9h-vE-Ujy" secondAttribute="top" constant="95" id="rH6-R0-WcA"/>
+                            <constraint firstItem="2Dv-lX-cZy" firstAttribute="leading" secondItem="z9h-vE-Ujy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tRq-oX-iEr"/>
+                            <constraint firstItem="YqJ-No-zhK" firstAttribute="leading" secondItem="z9h-vE-Ujy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xKy-qF-wJO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userAuthor" destination="2Dv-lX-cZy" id="Qqy-Xm-w3I"/>
+                        <outlet property="userBook" destination="YqJ-No-zhK" id="q2d-iX-xaM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZLo-wn-fLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ljz-Xb-cDM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="568" y="91"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
