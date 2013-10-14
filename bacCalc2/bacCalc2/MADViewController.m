@@ -12,12 +12,6 @@
 
 @end
 
-/*
- PROBLEM: if i start the app and just enter weight, 
- or just enter gender, I don't want to be warned until
- I try to change the drinks/hours.
-*/
-
 @implementation MADViewController
 
 - (void)viewDidLoad{
@@ -48,27 +42,29 @@
     _drunkStatus.text = @"";
 }
 
-- (BOOL) checkData{
-    double weight = [_weight.text doubleValue];
-    if (_gender.selectedSegmentIndex == -1){
-        if (1 < weight < 500){
-            [self sendAlert:@"Please select your gender."];
-            [self resetFunc];
-            return FALSE;
-        }
-        else{
-            [self sendAlert:@"Please select your gender and enter your weight."];
-            [self resetFunc];
-            return FALSE;
-        }
-    }
-    else if (1 < weight || weight < 500){
-        [self sendAlert:@"Please enter your weight."];
-        [self resetFunc];
-        return FALSE;
-    }
-    return TRUE;
-}
+//- (BOOL) checkData{
+//    double weight = [_weight.text doubleValue];
+//    if (_gender.selectedSegmentIndex == -1){
+//        if (weight > 1 && weight < 500){
+//            [self sendAlert:@"Please select your gender."];
+//            [self resetFunc];
+//            return FALSE;
+//        }
+//        else{
+//            [self sendAlert:@"Please select your gender and enter your weight."];
+//            [self resetFunc];
+//            return FALSE;
+//        }
+//    }
+//    else if (1 < weight || weight > 500){
+//        [self sendAlert:@"Please enter your weight."];
+//        [self resetFunc];
+//        return FALSE;
+//    }
+//    else {
+//        return TRUE;
+//    }
+//}
 
 - (void) calculateBAC{
     double genderConst = 0.00;
@@ -78,44 +74,38 @@
     
     //make sure required input has been entered.
     if (drinks != 0 || hours != 0){
-        if (_gender.selectedSegmentIndex == -1 && weight == 0){
-            [self sendAlert:@"Please select your gender and enter your weight."];
+        if (_gender.selectedSegmentIndex == -1 && (weight == 0 || weight > 500 || weight < 0)){
+            [self sendAlert:@"Please select your gender and enter a valid weight."];
             [self resetFunc];
             return;
         }
         else if (_gender.selectedSegmentIndex == -1){
-            [self sendAlert:@"Please enter your weight."];
-            [self resetFunc];
-            return;
-        }
-        else if (weight == 0){
             [self sendAlert:@"Please select your gender."];
             [self resetFunc];
             return;
         }
+        else if (weight == 0 || weight > 500 || weight < 0){
+            [self sendAlert:@"Please enter a valid weight."];
+            _weight.text = @"";
+            [self resetFunc];
+            return;
+        }
     }
+    
+    if (_gender.selectedSegmentIndex != -1 && weight == 0) return;
     
     /* set gender */
     if (_gender.selectedSegmentIndex == 0) {
-        genderConst = 0.68;
-    }
-    else if (_gender.selectedSegmentIndex == 1){
         genderConst = 0.55;
     }
-    
-    /* check and set weight */
-    if (weight < 1 || weight > 500){
-        [self sendAlert:@"Please enter a valid weight in lbs."];
-        _weight.text = @"";
-        return;
+    else if (_gender.selectedSegmentIndex == 1){
+        genderConst = 0.68;
     }
-    
-    
     
     double currentBac = drinks * 6 * 1.055/weight * genderConst - (0.015 * hours);
     if (currentBac < 0) currentBac = 0;
     else if (currentBac == 0) _drunkStatus.text = @"Sober as a bird";
-    else if (0 < currentBac < 0.03) _drunkStatus.text = @"Cheers to alcohol!";
+    else if (0.02 < currentBac < 0.03) _drunkStatus.text = @"Cheers to alcohol!";
     else if (0.03 <= currentBac < 0.06) _drunkStatus.text = @"You're in the zone";
     else if (0.06 <= currentBac < 0.08) _drunkStatus.text = @"Feelings of invincibility common.";
     else if (0.08 <= currentBac < 0.1) _drunkStatus.text = @"Over the legal driving limit!";
@@ -131,10 +121,10 @@
     
 
 - (IBAction)genderChanged:(UISegmentedControl *)sender {
-    [self calculateBAC];
+    /*if ([self checkData])*/ [self calculateBAC];
 }
 - (IBAction)weightChanged:(UITextField *)sender {
-    [self calculateBAC];
+    /*if ([self checkData])*/ [self calculateBAC];
 }
 
 
@@ -143,14 +133,14 @@
     drinks = drinks - 1;
     if (drinks <= 0 || drinks > 65) _drinks.text = @"0";
     else _drinks.text = [NSString stringWithFormat:@"%d", drinks];
-    if ([self checkData]) [self calculateBAC];
+    /*if ([self checkData])*/ [self calculateBAC];
 }
 - (IBAction)increaseDrinks:(UIButton *)sender {
     int drinks = [_drinks.text doubleValue];
     drinks = drinks + 1;
     if (drinks <= 0 || drinks > 65) _drinks.text = @"0";
     else _drinks.text = [NSString stringWithFormat:@"%d", drinks];
-    if ([self checkData]) [self calculateBAC];
+    /*if ([self checkData])*/ [self calculateBAC];
 }
 
 
@@ -159,14 +149,14 @@
     hours = hours - 1;
     if (hours <= 0 || hours > 24) _hours.text = @"0";
     else _hours.text = [NSString stringWithFormat:@"%d", hours];
-    if ([self checkData]) [self calculateBAC];
+    /*if ([self checkData])*/ [self calculateBAC];
 }
 - (IBAction)increaseHours:(UIButton *)sender {
     int hours = [_hours.text doubleValue];
     hours = hours + 1;
     if (hours <= 0 || hours > 24) _hours.text = @"0";
     else _hours.text = [NSString stringWithFormat:@"%d", hours];
-    if ([self checkData]) [self calculateBAC];
+    /*if ([self checkData])*/ [self calculateBAC];
 }
 
 

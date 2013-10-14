@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A120F65C17F9F3BF00901BFE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A120F65B17F9F3BF00901BFE /* background.png */; };
+		A120F66417FA3D3300901BFE /* textbox.png in Resources */ = {isa = PBXBuildFile; fileRef = A120F66317FA3D3300901BFE /* textbox.png */; };
 		A152570717F7853F0092AFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A152570617F7853F0092AFC3 /* UIKit.framework */; };
 		A152570917F7853F0092AFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A152570817F7853F0092AFC3 /* Foundation.framework */; };
 		A152570B17F7853F0092AFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A152570A17F7853F0092AFC3 /* CoreGraphics.framework */; };
@@ -18,9 +20,14 @@
 		A152571D17F7853F0092AFC3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A152571C17F7853F0092AFC3 /* Default-568h@2x.png */; };
 		A152572017F7853F0092AFC3 /* MADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A152571F17F7853F0092AFC3 /* MADViewController.m */; };
 		A152572317F7853F0092AFC3 /* MADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A152572117F7853F0092AFC3 /* MADViewController.xib */; };
+		A152572A17F787DC0092AFC3 /* 57icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A152572917F787DC0092AFC3 /* 57icon.png */; };
+		A1CAC4D617FB269200AFED64 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = A1CAC4D417FB269200AFED64 /* button.png */; };
+		A1CAC4D917FB280900AFED64 /* buttonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = A1CAC4D817FB280900AFED64 /* buttonPressed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A120F65B17F9F3BF00901BFE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		A120F66317FA3D3300901BFE /* textbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbox.png; sourceTree = "<group>"; };
 		A152570317F7853F0092AFC3 /* bacCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bacCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A152570617F7853F0092AFC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A152570817F7853F0092AFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +44,9 @@
 		A152571E17F7853F0092AFC3 /* MADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MADViewController.h; sourceTree = "<group>"; };
 		A152571F17F7853F0092AFC3 /* MADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MADViewController.m; sourceTree = "<group>"; };
 		A152572217F7853F0092AFC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MADViewController.xib; sourceTree = "<group>"; };
+		A152572917F787DC0092AFC3 /* 57icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 57icon.png; path = ../57icon.png; sourceTree = "<group>"; };
+		A1CAC4D417FB269200AFED64 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		A1CAC4D817FB280900AFED64 /* buttonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPressed.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,11 @@
 		A152570D17F7853F0092AFC3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A1CAC4D817FB280900AFED64 /* buttonPressed.png */,
+				A1CAC4D417FB269200AFED64 /* button.png */,
+				A120F66317FA3D3300901BFE /* textbox.png */,
+				A120F65B17F9F3BF00901BFE /* background.png */,
+				A152572917F787DC0092AFC3 /* 57icon.png */,
 				A152570E17F7853F0092AFC3 /* bacCalc-Info.plist */,
 				A152570F17F7853F0092AFC3 /* InfoPlist.strings */,
 				A152571217F7853F0092AFC3 /* main.m */,
@@ -164,6 +179,11 @@
 				A152571B17F7853F0092AFC3 /* Default@2x.png in Resources */,
 				A152571D17F7853F0092AFC3 /* Default-568h@2x.png in Resources */,
 				A152572317F7853F0092AFC3 /* MADViewController.xib in Resources */,
+				A152572A17F787DC0092AFC3 /* 57icon.png in Resources */,
+				A120F65C17F9F3BF00901BFE /* background.png in Resources */,
+				A120F66417FA3D3300901BFE /* textbox.png in Resources */,
+				A1CAC4D617FB269200AFED64 /* button.png in Resources */,
+				A1CAC4D917FB280900AFED64 /* buttonPressed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +319,7 @@
 				A152572817F7853F0092AFC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
