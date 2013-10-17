@@ -7,6 +7,7 @@
 //
 
 #import "MADViewController.h"
+#import "Scene2ViewController.h"
 
 @interface MADViewController ()
 
