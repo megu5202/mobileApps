@@ -18,6 +18,8 @@
 		A188204018197261009A9CBB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A188203F18197261009A9CBB /* Default-568h@2x.png */; };
 		A188204318197261009A9CBB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A188204118197261009A9CBB /* MainStoryboard.storyboard */; };
 		A188204618197261009A9CBB /* MADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A188204518197261009A9CBB /* MADViewController.m */; };
+		A188205118197501009A9CBB /* continents.plist in Resources */ = {isa = PBXBuildFile; fileRef = A188205018197501009A9CBB /* continents.plist */; };
+		A18820561819791A009A9CBB /* MADDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A18820551819791A009A9CBB /* MADDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		A188204218197261009A9CBB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A188204418197261009A9CBB /* MADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MADViewController.h; sourceTree = "<group>"; };
 		A188204518197261009A9CBB /* MADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MADViewController.m; sourceTree = "<group>"; };
+		A188205018197501009A9CBB /* continents.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = continents.plist; sourceTree = "<group>"; };
+		A18820541819791A009A9CBB /* MADDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADDetailViewController.h; sourceTree = "<group>"; };
+		A18820551819791A009A9CBB /* MADDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 		A188201D18197261009A9CBB = {
 			isa = PBXGroup;
 			children = (
+				A188205018197501009A9CBB /* continents.plist */,
 				A188202F18197261009A9CBB /* countries */,
 				A188202818197261009A9CBB /* Frameworks */,
 				A188202718197261009A9CBB /* Products */,
@@ -86,6 +92,8 @@
 				A188203818197261009A9CBB /* MADAppDelegate.h */,
 				A188203918197261009A9CBB /* MADAppDelegate.m */,
 				A188204118197261009A9CBB /* MainStoryboard.storyboard */,
+				A18820541819791A009A9CBB /* MADDetailViewController.h */,
+				A18820551819791A009A9CBB /* MADDetailViewController.m */,
 				A188204418197261009A9CBB /* MADViewController.h */,
 				A188204518197261009A9CBB /* MADViewController.m */,
 				A188203018197261009A9CBB /* Supporting Files */,
@@ -164,6 +172,7 @@
 				A188203E18197261009A9CBB /* Default@2x.png in Resources */,
 				A188204018197261009A9CBB /* Default-568h@2x.png in Resources */,
 				A188204318197261009A9CBB /* MainStoryboard.storyboard in Resources */,
+				A188205118197501009A9CBB /* continents.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +186,7 @@
 				A188203618197261009A9CBB /* main.m in Sources */,
 				A188203A18197261009A9CBB /* MADAppDelegate.m in Sources */,
 				A188204618197261009A9CBB /* MADViewController.m in Sources */,
+				A18820561819791A009A9CBB /* MADDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

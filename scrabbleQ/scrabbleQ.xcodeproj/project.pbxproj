@@ -18,6 +18,9 @@
 		A188201118197230009A9CBB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A188201018197230009A9CBB /* Default-568h@2x.png */; };
 		A188201418197230009A9CBB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A188201218197230009A9CBB /* MainStoryboard.storyboard */; };
 		A188201718197230009A9CBB /* MADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A188201618197230009A9CBB /* MADViewController.m */; };
+		A188204E18197431009A9CBB /* qwordswithoutu1.plist in Resources */ = {isa = PBXBuildFile; fileRef = A188204C18197431009A9CBB /* qwordswithoutu1.plist */; };
+		A188204F18197431009A9CBB /* qwordswithoutu2.plist in Resources */ = {isa = PBXBuildFile; fileRef = A188204D18197431009A9CBB /* qwordswithoutu2.plist */; };
+		A18820531819778E009A9CBB /* scrabbletile30.png in Resources */ = {isa = PBXBuildFile; fileRef = A18820521819778E009A9CBB /* scrabbletile30.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		A188201318197230009A9CBB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A188201518197230009A9CBB /* MADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MADViewController.h; sourceTree = "<group>"; };
 		A188201618197230009A9CBB /* MADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MADViewController.m; sourceTree = "<group>"; };
+		A188204C18197431009A9CBB /* qwordswithoutu1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = qwordswithoutu1.plist; path = ../qwordswithoutu1.plist; sourceTree = "<group>"; };
+		A188204D18197431009A9CBB /* qwordswithoutu2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = qwordswithoutu2.plist; path = ../qwordswithoutu2.plist; sourceTree = "<group>"; };
+		A18820521819778E009A9CBB /* scrabbletile30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrabbletile30.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 		A188200118197230009A9CBB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A188204C18197431009A9CBB /* qwordswithoutu1.plist */,
+				A188204D18197431009A9CBB /* qwordswithoutu2.plist */,
+				A18820521819778E009A9CBB /* scrabbletile30.png */,
 				A188200218197230009A9CBB /* scrabbleQ-Info.plist */,
 				A188200318197230009A9CBB /* InfoPlist.strings */,
 				A188200618197230009A9CBB /* main.m */,
@@ -164,6 +173,9 @@
 				A188200F18197230009A9CBB /* Default@2x.png in Resources */,
 				A188201118197230009A9CBB /* Default-568h@2x.png in Resources */,
 				A188201418197230009A9CBB /* MainStoryboard.storyboard in Resources */,
+				A188204E18197431009A9CBB /* qwordswithoutu1.plist in Resources */,
+				A188204F18197431009A9CBB /* qwordswithoutu2.plist in Resources */,
+				A18820531819778E009A9CBB /* scrabbletile30.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

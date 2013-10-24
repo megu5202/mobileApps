@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MADDetailViewController : UITableViewController
+<UITableViewDataSource, UITableViewDelegate>
+
+@property(strong,nonatomic)NSMutableArray *countryList; 
 
 @end

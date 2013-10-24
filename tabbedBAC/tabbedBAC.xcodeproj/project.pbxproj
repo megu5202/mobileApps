@@ -23,6 +23,7 @@
 		A14C02F9181042050069E617 /* MADSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14C02F8181042050069E617 /* MADSecondViewController.m */; };
 		A14C02FB181042050069E617 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A14C02FA181042050069E617 /* second.png */; };
 		A14C02FD181042050069E617 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A14C02FC181042050069E617 /* second@2x.png */; };
+		A14C0305181045520069E617 /* MADThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14C0304181045520069E617 /* MADThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		A14C02F8181042050069E617 /* MADSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MADSecondViewController.m; sourceTree = "<group>"; };
 		A14C02FA181042050069E617 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		A14C02FC181042050069E617 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		A14C0303181045520069E617 /* MADThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADThirdViewController.h; sourceTree = "<group>"; };
+		A14C0304181045520069E617 /* MADThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +102,10 @@
 				A14C02ED181042050069E617 /* MainStoryboard.storyboard */,
 				A14C02F0181042050069E617 /* MADFirstViewController.h */,
 				A14C02F1181042050069E617 /* MADFirstViewController.m */,
-				A14C02F3181042050069E617 /* first.png */,
-				A14C02F5181042050069E617 /* first@2x.png */,
 				A14C02F7181042050069E617 /* MADSecondViewController.h */,
 				A14C02F8181042050069E617 /* MADSecondViewController.m */,
-				A14C02FA181042050069E617 /* second.png */,
-				A14C02FC181042050069E617 /* second@2x.png */,
+				A14C0303181045520069E617 /* MADThirdViewController.h */,
+				A14C0304181045520069E617 /* MADThirdViewController.m */,
 				A14C02DC181042050069E617 /* Supporting Files */,
 			);
 			path = tabbedBAC;
@@ -113,6 +114,10 @@
 		A14C02DC181042050069E617 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A14C02F3181042050069E617 /* first.png */,
+				A14C02F5181042050069E617 /* first@2x.png */,
+				A14C02FA181042050069E617 /* second.png */,
+				A14C02FC181042050069E617 /* second@2x.png */,
 				A14C02DD181042050069E617 /* tabbedBAC-Info.plist */,
 				A14C02DE181042050069E617 /* InfoPlist.strings */,
 				A14C02E1181042050069E617 /* main.m */,
@@ -199,6 +204,7 @@
 				A14C02E6181042050069E617 /* MADAppDelegate.m in Sources */,
 				A14C02F2181042050069E617 /* MADFirstViewController.m in Sources */,
 				A14C02F9181042050069E617 /* MADSecondViewController.m in Sources */,
+				A14C0305181045520069E617 /* MADThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

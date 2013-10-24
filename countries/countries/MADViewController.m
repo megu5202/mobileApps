@@ -7,23 +7,64 @@
 //
 
 #import "MADViewController.h"
+#import "MADDetailViewController.h"
 
-@interface MADViewController ()
+@interface MADViewController (){
+    NSMutableDictionary *continentData;
+}
 
 @end
 
 @implementation MADViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    //returns a bundle object of our app
+	NSBundle *bundle=[NSBundle mainBundle];
+    //retrieve the path of continents.plist
+    NSString *plistPath=[bundle pathForResource:@"continents" ofType:@"plist"];
+    //loads the contents of the plist file into a dictionary
+    NSMutableDictionary *dictionary=[[NSMutableDictionary alloc] initWithContentsOfFile:plistPath]; 
+    //the dictionary uses the continents as the keys and a NSArray with the countries for each continent. 
+    continentData=dictionary;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [continentData count]; //returns the number of continents
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]
+                initWithStyle:UITableViewCellStyleDefault
+                reuseIdentifier:CellIdentifier];
+    }
+    //creates an array with all keys from our dictionary
+    NSArray *rowData=[continentData allKeys];
+    //sets the text of the cell with the row being requested
+    cell.textLabel.text=[rowData objectAtIndex:indexPath.row];
+    
+    return cell; 
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"countrysegue"]) {
+        MADDetailViewController *countryViewController=segue.destinationViewController;
+        NSIndexPath *indexPath=[self.tableView indexPathForSelectedRow];
+        //creates an array with all keys from our dictionary
+        NSArray *rowData=[continentData allKeys];
+        countryViewController.title=[rowData objectAtIndex:indexPath.row];
+        countryViewController.countryList=[continentData objectForKey:countryViewController.title]; 
+    } 
+} 
+
 
 @end

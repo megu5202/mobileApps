@@ -21,6 +21,7 @@
 }
 
 - (IBAction)submitQuestion:(UIButton *)sender {
+    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
     //mailto syntax: mailto:first@example.com?cc=second@example.com,third@example.com& subject=something&body=the body
     //Mailto parameter should be preceded by “?” for the first or only parameter and “&” for second and subsequent parameter
     NSString *recipients = @"mailto:melissa.guba@colorado.edu?subject=Message from Boulder app";
