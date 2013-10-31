@@ -13,16 +13,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="wHn-BB-JJ3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="wHn-BB-JJ3">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="gYx-yb-6AY" kind="push" identifier="countrysegue" id="CAZ-la-g6G"/>
+                                    <segue destination="gYx-yb-6AY" kind="push" identifier="countrySegue" trigger="accessoryAction" id="BqP-x5-0kn"/>
+                                    <segue destination="wQW-18-SvH" kind="push" identifier="continentSegue" id="AFq-8L-dP7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -35,7 +36,128 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w97-3k-ncv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568" y="75"/>
+            <point key="canvasLocation" x="534" y="75"/>
+        </scene>
+        <!--Country View Controller - Add New Country-->
+        <scene sceneID="Kaf-Qx-Nwl">
+            <objects>
+                <viewController id="Qct-Xc-cYM" customClass="MADCountryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2U-zk-NFd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter new country:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNo-YI-oju">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-fq-AEF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="zhr-eo-H93"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bm3-fq-AEF" firstAttribute="leading" secondItem="HNo-YI-oju" secondAttribute="leading" type="default" id="8Jx-CN-VtU"/>
+                            <constraint firstItem="HNo-YI-oju" firstAttribute="leading" secondItem="g2U-zk-NFd" secondAttribute="leading" constant="42" id="cgi-Qn-iF9"/>
+                            <constraint firstItem="bm3-fq-AEF" firstAttribute="top" secondItem="HNo-YI-oju" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pmv-XB-K05"/>
+                            <constraint firstItem="HNo-YI-oju" firstAttribute="top" secondItem="g2U-zk-NFd" secondAttribute="top" constant="91" id="uWi-BO-tMG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Country" id="p6b-3P-CLe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FLg-Jt-Vhb">
+                            <connections>
+                                <segue destination="0ie-Qo-0L9" kind="unwind" unwindAction="unwindCountry:" id="Axn-tT-Xon"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TFF-Jh-DE6">
+                            <connections>
+                                <segue destination="0ie-Qo-0L9" kind="unwind" identifier="doneSegue" unwindAction="unwindCountry:" id="cYK-3e-oCD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countryText" destination="bm3-fq-AEF" id="eee-dC-EBR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQF-EK-63L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0ie-Qo-0L9" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1824" y="247"/>
+        </scene>
+        <!--Continent Info View Controller-->
+        <scene sceneID="lr7-bD-C8R">
+            <objects>
+                <tableViewController id="wQW-18-SvH" customClass="MADContinentInfoViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="x8Y-ul-Xaq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Continent Info" id="fhe-mi-Uuk">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Q0G-Ih-Ng9" detailTextLabel="B0Y-5f-8Qu" style="IBUITableViewCellStyleValue1" id="ZG8-UJ-aOU">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Continent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0G-Ih-Ng9">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0Y-5f-8Qu">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="hds-lr-f3z" detailTextLabel="fzV-dQ-VHl" style="IBUITableViewCellStyleValue1" id="8jT-9F-yuH">
+                                        <rect key="frame" x="0.0" y="91" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Number of Countries" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hds-lr-f3z">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-dQ-VHl">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="wQW-18-SvH" id="aeU-gB-DnV"/>
+                            <outlet property="delegate" destination="wQW-18-SvH" id="2q6-Jk-HhV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="XsJ-UV-jhX"/>
+                    <connections>
+                        <outlet property="continentName" destination="B0Y-5f-8Qu" id="9rr-px-k8M"/>
+                        <outlet property="countryNumber" destination="fzV-dQ-VHl" id="UxE-yv-BMe"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ib-45-7zx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="-424"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="48I-Z4-URm">
@@ -61,11 +183,17 @@
                             <outlet property="delegate" destination="gYx-yb-6AY" id="Hiu-Q2-5Cp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WcC-XL-anq"/>
+                    <navigationItem key="navigationItem" id="WcC-XL-anq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZhN-dz-MS4">
+                            <connections>
+                                <segue destination="9C7-5r-XKD" kind="modal" id="h4j-Q0-gIR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjb-U8-egf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="75"/>
+            <point key="canvasLocation" x="994" y="247"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AJX-1A-lxh">
@@ -85,13 +213,53 @@
             </objects>
             <point key="canvasLocation" x="145" y="75"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i7M-gX-krn">
+            <objects>
+                <navigationController id="9C7-5r-XKD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XxZ-FA-fNC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qct-Xc-cYM" kind="relationship" relationship="rootViewController" id="AzT-8o-ARB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0h-wq-tHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1414" y="247"/>
+        </scene>
     </scenes>
     <classes>
+        <class className="MADContinentInfoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MADContinentInfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="continentName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="countryNumber" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MADCountryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MADCountryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="countryText" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="MADDetailViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MADDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="unwindCountry:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
         </class>
         <class className="MADViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MADViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

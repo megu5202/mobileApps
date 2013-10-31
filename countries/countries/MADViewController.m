@@ -8,6 +8,7 @@
 
 #import "MADViewController.h"
 #import "MADDetailViewController.h"
+#import "MADContinentInfoViewController.h"
 
 @interface MADViewController (){
     NSMutableDictionary *continentData;
@@ -26,7 +27,7 @@
     //loads the contents of the plist file into a dictionary
     NSMutableDictionary *dictionary=[[NSMutableDictionary alloc] initWithContentsOfFile:plistPath]; 
     //the dictionary uses the continents as the keys and a NSArray with the countries for each continent. 
-    continentData=dictionary;
+    continentData = dictionary;
 }
 
 - (void)didReceiveMemoryWarning{
@@ -56,15 +57,24 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"countrysegue"]) {
-        MADDetailViewController *countryViewController=segue.destinationViewController;
-        NSIndexPath *indexPath=[self.tableView indexPathForSelectedRow];
+    if ([segue.identifier isEqualToString: @"countrySegue"]) {
+        MADDetailViewController *countryViewController = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         //creates an array with all keys from our dictionary
-        NSArray *rowData=[continentData allKeys];
+        NSArray *rowData = [continentData allKeys];
         countryViewController.title=[rowData objectAtIndex:indexPath.row];
         countryViewController.countryList=[continentData objectForKey:countryViewController.title]; 
-    } 
-} 
+    }
+    if ([segue.identifier isEqualToString: @"continentSegue"]) {
+        MADContinentInfoViewController *infoViewController = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSArray *rowData = [continentData allKeys];
+        infoViewController.name = [rowData objectAtIndex:indexPath.row];
+        infoViewController.number = [NSString stringWithFormat:@"%d",
+                                   [[continentData objectForKey:infoViewController.name]
+                                    count]];
+    }
+}
 
 
 @end

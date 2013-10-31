@@ -4,6 +4,10 @@
 <dict>
 	<key>Africa</key>
 	<array>
+		<string>Kenya</string>
+		<string>South Africa</string>
+		<string>Ghana</string>
+		<string>Libya</string>
 		<string>Algeria</string>
 		<string>Angola</string>
 	</array>
@@ -11,17 +15,30 @@
 	<array/>
 	<key>Asia</key>
 	<array>
+		<string>Russia</string>
+		<string>Mongolia</string>
+		<string>Japan</string>
+		<string>China</string>
 		<string>Afghanistan</string>
 		<string>Bahrain</string>
 	</array>
 	<key>Europe</key>
 	<array>
+		<string>Germany</string>
+		<string>Scotland</string>
+		<string>Ireland</string>
+		<string>England</string>
+		<string>Greece</string>
+		<string>Portugal</string>
+		<string>Spain</string>
+		<string>Italy</string>
 		<string>Albania</string>
 		<string>Andorra</string>
 	</array>
 	<key>North America</key>
 	<array>
 		<string>Canada</string>
+		<string>Mexico</string>
 		<string>United States</string>
 	</array>
 	<key>Oceania</key>
@@ -31,6 +48,8 @@
 	</array>
 	<key>South America</key>
 	<array>
+		<string>Nepal</string>
+		<string>Peru</string>
 		<string>Argentina</string>
 		<string>Brazil</string>
 	</array>

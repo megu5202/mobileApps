@@ -7,6 +7,7 @@
 //
 
 #import "MADDetailViewController.h"
+#import "MADCountryViewController.h"
 
 @interface MADDetailViewController ()
 
@@ -24,11 +25,6 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -82,6 +78,17 @@
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } 
   
+}
+
+- (IBAction)unwindCountry:(UIStoryboardSegue *)segue{
+    if ([segue.identifier isEqualToString:@"doneSegue"]) {
+        MADCountryViewController *source = [segue sourceViewController];
+        if (source.addedCountry != nil) {
+            [_countryList addObject: source.addedCountry];
+            [self.tableView reloadData];
+        }
+        
+    }
 }
 
 
