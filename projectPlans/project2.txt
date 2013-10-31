@@ -1,0 +1,6 @@
+I will be completely redoing the previous Blood Alcohol Content calculator, incorporating the changes Aileen suggested I make, as well as making it a Tabbed application. I also hope to add a small database of drinks so that a user can select what they drank to calculate the alcohol they consumed.
+There will be __ tabs. The first tab will hold the user data (their gender, height, weight). The second tab will hold the current BAC page, which takes the user data and the drink data and then calculated the users current BAC and gives them an estimate of how drunk they are. The third page will be a list of drinks, as part of a navigation controller, that can be added to or deleted from, and which the BAC calculator page uses to get how much alcohol a user has consumed. In time I would like to also include a tab for past nights saved data, and a map of where the drinks have been drunk. Other ideas include tracking the person using the accelerometer to see if they are driving and have an alert that says NO.
+
+I will test the app by running through multiple scenarios a user might have, using the app from multiple orientations, and getting a friend to try and break it.
+
+I have included and image of the mock-up of what this app will look like.
