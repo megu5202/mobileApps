@@ -1,4 +1,5 @@
 mobileApps
 ==========
 
-The first project is bacCalc2!
+First Project: bacCalc2
+Second Project: bac
