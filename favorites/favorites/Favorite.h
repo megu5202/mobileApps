@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Favorite : NSObject
+
 @property(copy, nonatomic) NSString *favBook;
 @property(copy, nonatomic) NSString *favAuthor;
+
 @end

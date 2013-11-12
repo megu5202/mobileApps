@@ -32,7 +32,7 @@
                             </toolbar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkF-Ur-pHU">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="hNS-S4-qgo"/>
+                                    <constraint firstAttribute="height" constant="48" id="Iy4-L4-QdG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -40,7 +40,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swe-nd-H1r">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="VrX-pE-gIO"/>
+                                    <constraint firstAttribute="height" constant="44" id="SAy-T0-gYG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -50,9 +50,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="swe-nd-H1r" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="709-o4-cyv"/>
-                            <constraint firstAttribute="bottom" secondItem="swe-nd-H1r" secondAttribute="bottom" constant="243" id="7nz-6H-h9w"/>
+                            <constraint firstItem="swe-nd-H1r" firstAttribute="top" secondItem="nkF-Ur-pHU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8Kj-30-q3o"/>
                             <constraint firstItem="4Sl-70-eY6" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JgC-uw-XLZ"/>
-                            <constraint firstItem="nkF-Ur-pHU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="194" id="ULH-bd-JoZ"/>
+                            <constraint firstItem="nkF-Ur-pHU" firstAttribute="top" secondItem="4Sl-70-eY6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SoO-FG-3yu"/>
                             <constraint firstAttribute="trailing" secondItem="swe-nd-H1r" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UP3-xs-hLO"/>
                             <constraint firstItem="NhX-vx-I9F" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="Xk3-rE-jzD"/>
                             <constraint firstItem="NhX-vx-I9F" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="aw7-4W-Meb"/>
@@ -144,6 +144,29 @@
             <point key="canvasLocation" x="568" y="91"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MADViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MADViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="returned:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="outlet" name="authorLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bookLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="Scene2ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Scene2ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="userAuthor" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userBook" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
