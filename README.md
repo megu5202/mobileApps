@@ -1,6 +1,7 @@
 mobileApps
 ==========
 
-First Project: bacCalc2
+Class labs -> "labs"
+Personal practice -> "practiceApps"
+Projects -> "projects"
 
-Second Project: bac
