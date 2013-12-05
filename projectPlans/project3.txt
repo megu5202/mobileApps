@@ -1,0 +1,6 @@
+I will be adding a small database of drinks so that a user can select what they drank to calculate the alcohol they consumed, and sorting it in a list that keeps data.
+Instead of just a tally, the third page will be a list of drinks, as part of a navigation controller, that can be added to or deleted from, and which the BAC calculator page uses to get how much alcohol a user has consumed. Once you click on a drink you will be able to put in the time started and ended drinking the drink. My reach goal is to include a tab for past nights saved data, and a map of where the drinks have been drunk. Other ideas include tracking the person using the accelerometer to see if they are driving and have an alert that says NO.
+
+I will test the app by running through multiple scenarios a user might have, using the app from multiple orientations, and getting a friend to try and break it.
+
+I have included and image of the mock-up of what this app will look like. (it is the same from project 2 because I did not have time to make the database, or the knowledge on how to make it perpetuate, at that time). If I add another tab it will be for the map, and it will look like a map with pins for where each drink was drank.
