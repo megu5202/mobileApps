@@ -24,7 +24,7 @@
     NSInteger gender = [(MADTabViewController*)self.tabBarController getGender];
     double weight = [(MADTabViewController*)self.tabBarController getWeight];
     double age = [(MADTabViewController*)self.tabBarController getAge];
-    double drinks = [(MADTabViewController*)self.tabBarController getDrinks];
+    double drinks = [(MADTabViewController*)self.tabBarController getDrinkCount];
     double hours = [(MADTabViewController*)self.tabBarController getHours];
     float bac = [(MADTabViewController*)self.tabBarController getBAC];
     NSString *drunkenness = [(MADTabViewController*)self.tabBarController getDrunkenness];
@@ -33,7 +33,7 @@
     _genderOut.text = [NSString stringWithFormat:@"%d", gender];
     _weightOut.text = [NSString stringWithFormat:@"%.3f", weight];
     _ageOut.text = [NSString stringWithFormat:@"%.3f", age];
-    _drinksOut.text = [NSString stringWithFormat:@"%.3f", drinks];
+    _drinkCountOut.text = [NSString stringWithFormat:@"%.3f", drinks];
     _hoursOut.text = [NSString stringWithFormat:@"%.3f", hours];
     
     if (bac > 1.0) _bacOut.text = [NSString stringWithFormat:@"%.3f", 1.000];

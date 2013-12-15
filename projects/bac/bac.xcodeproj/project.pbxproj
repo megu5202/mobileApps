@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12ABA0C185A521100E02E95 /* drinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = A12ABA0B185A521100E02E95 /* drinks.plist */; };
+		A12ABA0F185A60D100E02E95 /* MADDrinkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ABA0E185A60D100E02E95 /* MADDrinkListViewController.m */; };
 		A15CC096182C5B63004765EF /* MADTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A15CC095182C5B63004765EF /* MADTabViewController.m */; };
+		A16A2425185CFC2A00C0C8FA /* MADDrinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16A2424185CFC2A00C0C8FA /* MADDrinkViewController.m */; };
 		A17693A0182BF4C20096A87D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A176939F182BF4C20096A87D /* UIKit.framework */; };
 		A17693A2182BF4C20096A87D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17693A1182BF4C20096A87D /* Foundation.framework */; };
 		A17693A4182BF4C20096A87D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17693A3182BF4C20096A87D /* CoreGraphics.framework */; };
@@ -31,8 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A12ABA0B185A521100E02E95 /* drinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = drinks.plist; path = bac/drinks.plist; sourceTree = "<group>"; };
+		A12ABA0D185A60D100E02E95 /* MADDrinkListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADDrinkListViewController.h; sourceTree = "<group>"; };
+		A12ABA0E185A60D100E02E95 /* MADDrinkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADDrinkListViewController.m; sourceTree = "<group>"; };
 		A15CC094182C5B63004765EF /* MADTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADTabViewController.h; sourceTree = "<group>"; };
 		A15CC095182C5B63004765EF /* MADTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADTabViewController.m; sourceTree = "<group>"; };
+		A16A2423185CFC2900C0C8FA /* MADDrinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADDrinkViewController.h; sourceTree = "<group>"; };
+		A16A2424185CFC2A00C0C8FA /* MADDrinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADDrinkViewController.m; sourceTree = "<group>"; };
 		A176939C182BF4C20096A87D /* bac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A176939F182BF4C20096A87D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A17693A1182BF4C20096A87D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -79,6 +87,7 @@
 		A1769393182BF4C20096A87D = {
 			isa = PBXGroup;
 			children = (
+				A12ABA0B185A521100E02E95 /* drinks.plist */,
 				A17693A5182BF4C20096A87D /* bac */,
 				A176939E182BF4C20096A87D /* Frameworks */,
 				A176939D182BF4C20096A87D /* Products */,
@@ -111,12 +120,16 @@
 				A17693B7182BF4C20096A87D /* MainStoryboard.storyboard */,
 				A15CC094182C5B63004765EF /* MADTabViewController.h */,
 				A15CC095182C5B63004765EF /* MADTabViewController.m */,
-				A17693CF182BFE280096A87D /* MADThirdViewController.h */,
-				A17693D0182BFE280096A87D /* MADThirdViewController.m */,
 				A17693BA182BF4C20096A87D /* MADFirstViewController.h */,
 				A17693BB182BF4C20096A87D /* MADFirstViewController.m */,
 				A17693C1182BF4C20096A87D /* MADSecondViewController.h */,
 				A17693C2182BF4C20096A87D /* MADSecondViewController.m */,
+				A17693CF182BFE280096A87D /* MADThirdViewController.h */,
+				A17693D0182BFE280096A87D /* MADThirdViewController.m */,
+				A12ABA0D185A60D100E02E95 /* MADDrinkListViewController.h */,
+				A12ABA0E185A60D100E02E95 /* MADDrinkListViewController.m */,
+				A16A2423185CFC2900C0C8FA /* MADDrinkViewController.h */,
+				A16A2424185CFC2A00C0C8FA /* MADDrinkViewController.m */,
 				A17693A6182BF4C20096A87D /* Supporting Files */,
 			);
 			path = bac;
@@ -207,6 +220,7 @@
 				A17693D9182C035E0096A87D /* plus.png in Resources */,
 				A18AAA241832246D003B3F2A /* icon@2x.png in Resources */,
 				A18AAA2618322473003B3F2A /* icon.png in Resources */,
+				A12ABA0C185A521100E02E95 /* drinks.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +237,8 @@
 				A17693C3182BF4C20096A87D /* MADSecondViewController.m in Sources */,
 				A17693D1182BFE280096A87D /* MADThirdViewController.m in Sources */,
 				A15CC096182C5B63004765EF /* MADTabViewController.m in Sources */,
+				A12ABA0F185A60D100E02E95 /* MADDrinkListViewController.m in Sources */,
+				A16A2425185CFC2A00C0C8FA /* MADDrinkViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

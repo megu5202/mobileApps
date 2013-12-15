@@ -50,7 +50,6 @@
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Tal-La-0b8" secondAttribute="centerY" type="user" id="0vP-Z4-gGx"/>
                             <constraint firstAttribute="centerX" secondItem="Tal-La-0b8" secondAttribute="centerX" type="user" id="Bpa-uB-BeT"/>
-                            <constraint firstItem="SWf-aO-ET0" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="JVT-RG-ou7"/>
                             <constraint firstItem="Tal-La-0b8" firstAttribute="top" secondItem="y7X-t3-0xD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QeB-a6-ExC"/>
                             <constraint firstItem="bHO-DK-Vbh" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="ThP-q9-h4B"/>
                             <constraint firstItem="y7X-t3-0xD" firstAttribute="top" secondItem="slC-Qg-9AZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ziy-oY-tyV"/>
@@ -61,7 +60,8 @@
                             <constraint firstItem="bHO-DK-Vbh" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="gqb-Oj-982"/>
                             <constraint firstAttribute="centerX" secondItem="slC-Qg-9AZ" secondAttribute="centerX" type="user" id="hz5-07-Cnh"/>
                             <constraint firstItem="SWf-aO-ET0" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="iz0-BZ-p0I"/>
-                            <constraint firstItem="bHO-DK-Vbh" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="xU3-ng-Cdh"/>
+                            <constraint firstItem="SWf-aO-ET0" firstAttribute="centerX" secondItem="slC-Qg-9AZ" secondAttribute="centerX" type="default" id="nBE-wT-z5k"/>
+                            <constraint firstItem="bHO-DK-Vbh" firstAttribute="trailing" secondItem="SWf-aO-ET0" secondAttribute="trailing" type="default" id="rJc-qi-BQq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="man.png" id="7"/>
@@ -74,96 +74,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="657" y="-457"/>
-        </scene>
-        <!--Third View Controller - Add Drink-->
-        <scene sceneID="4hR-xi-mv4">
-            <objects>
-                <viewController id="URB-tW-hQA" customClass="MADThirdViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TGz-jS-NIC">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="7fq-a4-tfQ"/>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Drinks:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fw-Ne-DG1">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hours:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xd-Sn-Uju">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" maximumValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="qCA-oU-K4h">
-                                <connections>
-                                    <action selector="drinksChanged:" destination="URB-tW-hQA" eventType="valueChanged" id="Rc5-ih-TBw"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnP-HG-Wep">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="47" id="ArB-xi-clM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSp-b6-cSQ">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" maximumValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="3SN-Sz-xpf">
-                                <connections>
-                                    <action selector="hoursChanged:" destination="URB-tW-hQA" eventType="valueChanged" id="q7n-Mz-HOg"/>
-                                </connections>
-                            </stepper>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="hvx-SC-yfb">
-                                <items>
-                                    <navigationItem title="Add a Drink" id="fyo-IR-MpD"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="3Fw-Ne-DG1" firstAttribute="leading" secondItem="TGz-jS-NIC" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="49X-g4-Log"/>
-                            <constraint firstAttribute="trailing" secondItem="3SN-Sz-xpf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6vX-cJ-apY"/>
-                            <constraint firstItem="hvx-SC-yfb" firstAttribute="top" secondItem="TGz-jS-NIC" secondAttribute="top" type="default" id="88F-Rd-HpE"/>
-                            <constraint firstItem="vSp-b6-cSQ" firstAttribute="top" secondItem="4xd-Sn-Uju" secondAttribute="top" type="default" id="8sg-nJ-Wii"/>
-                            <constraint firstItem="3SN-Sz-xpf" firstAttribute="bottom" secondItem="vSp-b6-cSQ" secondAttribute="bottom" type="default" id="A3r-rO-83m"/>
-                            <constraint firstItem="vSp-b6-cSQ" firstAttribute="baseline" secondItem="4xd-Sn-Uju" secondAttribute="baseline" type="default" id="Dx9-gE-QWl"/>
-                            <constraint firstItem="hvx-SC-yfb" firstAttribute="leading" secondItem="TGz-jS-NIC" secondAttribute="leading" type="default" id="F9q-JU-kTL"/>
-                            <constraint firstItem="WnP-HG-Wep" firstAttribute="baseline" secondItem="3Fw-Ne-DG1" secondAttribute="baseline" type="default" id="FGt-kq-tEG"/>
-                            <constraint firstItem="4xd-Sn-Uju" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TGz-jS-NIC" secondAttribute="leading" constant="20" type="user" id="Fsd-0d-NP0"/>
-                            <constraint firstItem="WnP-HG-Wep" firstAttribute="top" secondItem="3Fw-Ne-DG1" secondAttribute="top" type="default" id="GrO-3L-Fsc"/>
-                            <constraint firstItem="4xd-Sn-Uju" firstAttribute="leading" secondItem="TGz-jS-NIC" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Iox-9O-32f"/>
-                            <constraint firstItem="7fq-a4-tfQ" firstAttribute="bottom" secondItem="TGz-jS-NIC" secondAttribute="bottom" type="default" id="Pqg-Lm-MA2"/>
-                            <constraint firstItem="qCA-oU-K4h" firstAttribute="top" secondItem="TGz-jS-NIC" secondAttribute="top" constant="54" id="SO3-wR-P7I"/>
-                            <constraint firstItem="WnP-HG-Wep" firstAttribute="bottom" secondItem="qCA-oU-K4h" secondAttribute="bottom" type="default" id="Yea-f5-e3K"/>
-                            <constraint firstItem="vSp-b6-cSQ" firstAttribute="leading" secondItem="WnP-HG-Wep" secondAttribute="leading" type="default" id="Z5h-7N-hmE"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qCA-oU-K4h" secondAttribute="trailing" constant="20" type="user" id="a9A-cH-ezj"/>
-                            <constraint firstItem="hvx-SC-yfb" firstAttribute="trailing" secondItem="TGz-jS-NIC" secondAttribute="trailing" type="default" id="azf-8T-YTn"/>
-                            <constraint firstItem="vSp-b6-cSQ" firstAttribute="trailing" secondItem="WnP-HG-Wep" secondAttribute="trailing" type="default" id="bB5-qV-mg5"/>
-                            <constraint firstItem="7fq-a4-tfQ" firstAttribute="top" secondItem="TGz-jS-NIC" secondAttribute="top" type="default" id="cB2-p1-qgE"/>
-                            <constraint firstAttribute="centerX" secondItem="WnP-HG-Wep" secondAttribute="centerX" type="user" id="eYj-c7-YlD"/>
-                            <constraint firstItem="3SN-Sz-xpf" firstAttribute="top" secondItem="TGz-jS-NIC" secondAttribute="top" constant="92" id="esN-jl-Lr0"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3SN-Sz-xpf" secondAttribute="trailing" constant="20" type="user" id="gm8-Ln-ZJj"/>
-                            <constraint firstItem="3Fw-Ne-DG1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TGz-jS-NIC" secondAttribute="leading" constant="20" type="user" id="gvk-1L-7QI"/>
-                            <constraint firstItem="7fq-a4-tfQ" firstAttribute="leading" secondItem="TGz-jS-NIC" secondAttribute="leading" type="default" id="jTz-pE-A2M"/>
-                            <constraint firstItem="7fq-a4-tfQ" firstAttribute="trailing" secondItem="TGz-jS-NIC" secondAttribute="trailing" type="default" id="lEH-QS-mpo"/>
-                            <constraint firstAttribute="trailing" secondItem="qCA-oU-K4h" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oaf-ZC-gWc"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Add Drink" image="plus.png" id="C3t-rA-dFN"/>
-                    <connections>
-                        <outlet property="drinkStepper" destination="qCA-oU-K4h" id="H3Y-qI-XBf"/>
-                        <outlet property="drinksOut" destination="WnP-HG-Wep" id="5na-Js-EDB"/>
-                        <outlet property="hourStepper" destination="3SN-Sz-xpf" id="5OX-8F-aGG"/>
-                        <outlet property="hoursOut" destination="vSp-b6-cSQ" id="UJe-7k-iul"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Mi-RA-zvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="657" y="817"/>
         </scene>
         <!--Second View Controller - Second-->
         <scene sceneID="13">
@@ -308,7 +218,7 @@
                     <connections>
                         <outlet property="ageOut" destination="myk-px-Ebx" id="lUo-EQ-4He"/>
                         <outlet property="bacOut" destination="BZu-H9-MZJ" id="vuF-re-uJ6"/>
-                        <outlet property="drinksOut" destination="FpI-W2-Cen" id="Rhz-Mt-uXB"/>
+                        <outlet property="drinkCountOut" destination="FpI-W2-Cen" id="98p-n8-Ucw"/>
                         <outlet property="drunkennessOut" destination="2qw-Sj-loZ" id="VXs-ye-0k7"/>
                         <outlet property="genderOut" destination="CBm-GN-oCt" id="3xW-UA-OXf"/>
                         <outlet property="hoursOut" destination="Z2h-vO-Oa4" id="HTH-LG-wRb"/>
@@ -318,6 +228,168 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="657" y="179"/>
+        </scene>
+        <!--Third View Controller - Add a Drink-->
+        <scene sceneID="M6v-Re-3GO">
+            <objects>
+                <tableViewController id="WHa-dF-pSS" customClass="MADThirdViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ega-fS-DRU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ccp-45-sFD">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="ypF-1J-Cwt" kind="push" identifier="drinkTypeSegue" id="TSj-Pd-wJ3"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WHa-dF-pSS" id="8TE-Co-E4w"/>
+                            <outlet property="delegate" destination="WHa-dF-pSS" id="f6s-bV-0ge"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add a Drink" id="USd-O0-xUB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BbV-Yw-0am" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="856"/>
+        </scene>
+        <!--Drink List View Controller - Alcohol Type-->
+        <scene sceneID="OyU-pp-Ems">
+            <objects>
+                <tableViewController id="ypF-1J-Cwt" customClass="MADDrinkListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2px-LQ-b5g">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="D6c-Xt-Ggw">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="d24-iR-oQT" kind="push" identifier="drinkSegue" id="zUm-QQ-9As"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ypF-1J-Cwt" id="FDS-kV-ziO"/>
+                            <outlet property="delegate" destination="ypF-1J-Cwt" id="0ud-xE-O5P"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Alcohol Type" id="gGw-nI-Qq4">
+                        <barButtonItem key="backBarButtonItem" title="shit" id="19w-vx-wsi"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgD-zG-8lS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024" y="856"/>
+        </scene>
+        <!--Drink View Controller - placeholder title-->
+        <scene sceneID="aXL-cR-FlX">
+            <objects>
+                <viewController id="d24-iR-oQT" customClass="MADDrinkViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aeb-Uj-Rcz">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="xFP-5F-Y3s">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="499" id="qfW-YG-w1i"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Drink Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGa-4L-Rcc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="7Xc-M2-IGI"/>
+                                    <constraint firstAttribute="width" constant="230" id="USt-5W-sHK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXJ-4e-foS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="2O7-sL-n9f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Drink">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="drinkButton:" destination="d24-iR-oQT" eventType="touchUpInside" id="bSg-Ee-AJa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Drink Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQG-Qb-Sxj">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Drink ABV" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bA-bS-sB5">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xFP-5F-Y3s" firstAttribute="trailing" secondItem="Aeb-Uj-Rcz" secondAttribute="trailing" type="default" id="7yd-ha-ilQ"/>
+                            <constraint firstItem="CGa-4L-Rcc" firstAttribute="centerX" secondItem="pXJ-4e-foS" secondAttribute="centerX" type="default" id="Im6-Ug-qlR"/>
+                            <constraint firstItem="CGa-4L-Rcc" firstAttribute="centerX" secondItem="xFP-5F-Y3s" secondAttribute="centerX" type="default" id="Muw-7c-vEf"/>
+                            <constraint firstItem="xFP-5F-Y3s" firstAttribute="centerY" secondItem="pXJ-4e-foS" secondAttribute="centerY" type="default" id="P9K-ga-aHG"/>
+                            <constraint firstItem="CGa-4L-Rcc" firstAttribute="centerX" secondItem="XQG-Qb-Sxj" secondAttribute="centerX" type="default" id="ZfZ-R8-8yR"/>
+                            <constraint firstItem="xFP-5F-Y3s" firstAttribute="leading" secondItem="Aeb-Uj-Rcz" secondAttribute="leading" type="default" id="ddy-FA-fsL"/>
+                            <constraint firstItem="pXJ-4e-foS" firstAttribute="centerY" secondItem="Aeb-Uj-Rcz" secondAttribute="centerY" type="default" id="gp9-Io-Jod"/>
+                            <constraint firstItem="pXJ-4e-foS" firstAttribute="trailing" secondItem="6bA-bS-sB5" secondAttribute="trailing" type="default" id="kqV-CC-oP7"/>
+                            <constraint firstItem="CGa-4L-Rcc" firstAttribute="top" secondItem="6bA-bS-sB5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nvZ-O0-dSM"/>
+                            <constraint firstItem="XQG-Qb-Sxj" firstAttribute="top" secondItem="Aeb-Uj-Rcz" secondAttribute="top" constant="20" symbolic="YES" type="default" id="pzb-Jg-rod"/>
+                            <constraint firstItem="6bA-bS-sB5" firstAttribute="top" secondItem="XQG-Qb-Sxj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xgo-r5-Hyr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="placeholder title" id="myq-dp-6hv"/>
+                    <connections>
+                        <outlet property="drinkABV" destination="6bA-bS-sB5" id="TnG-9N-Jdx"/>
+                        <outlet property="drinkDetails" destination="CGa-4L-Rcc" id="Pnm-M0-5Wn"/>
+                        <outlet property="drinkName" destination="XQG-Qb-Sxj" id="ybM-od-QTB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fdh-66-9mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425" y="856"/>
+        </scene>
+        <!--Navigation Controller - Add Drink-->
+        <scene sceneID="vTH-Qs-InA">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8HC-kh-fQX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Drink" image="plus.png" id="RKd-gA-t2F"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="xwU-3w-k0B">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WHa-dF-pSS" kind="relationship" relationship="rootViewController" id="pyw-xI-vue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBL-22-dr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286" y="856"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="15">
@@ -332,7 +404,7 @@
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
                         <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
-                        <segue destination="URB-tW-hQA" kind="relationship" relationship="viewControllers" id="U3C-Vb-Aj6"/>
+                        <segue destination="8HC-kh-fQX" kind="relationship" relationship="viewControllers" id="DrH-uy-Wpa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -347,6 +419,18 @@
         <image name="second" width="16" height="16"/>
     </resources>
     <classes>
+        <class className="MADDrinkListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MADDrinkListViewController.h"/>
+        </class>
+        <class className="MADDrinkViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MADDrinkViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="drinkButton:"/>
+                <relationship kind="outlet" name="drinkABV" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="drinkDetails" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="drinkName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="MADFirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MADFirstViewController.h"/>
             <relationships>
@@ -361,7 +445,7 @@
             <relationships>
                 <relationship kind="outlet" name="ageOut" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="bacOut" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="drinksOut" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="drinkCountOut" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="drunkennessOut" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="genderOut" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="hoursOut" candidateClass="UILabel"/>
@@ -371,16 +455,8 @@
         <class className="MADTabViewController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MADTabViewController.h"/>
         </class>
-        <class className="MADThirdViewController" superclassName="UIViewController">
+        <class className="MADThirdViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MADThirdViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="drinksChanged:" candidateClass="UIStepper"/>
-                <relationship kind="action" name="hoursChanged:" candidateClass="UIStepper"/>
-                <relationship kind="outlet" name="drinkStepper" candidateClass="UIStepper"/>
-                <relationship kind="outlet" name="drinksOut" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="hourStepper" candidateClass="UIStepper"/>
-                <relationship kind="outlet" name="hoursOut" candidateClass="UILabel"/>
-            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

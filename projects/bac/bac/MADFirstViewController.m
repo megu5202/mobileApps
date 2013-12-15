@@ -93,7 +93,7 @@
     //selected segment must be default 0 should be not selected before anything happens
     _genderSelector.selectedSegmentIndex = -1;
     
-    [self sendAlert: @"Welcome!": @"Welcome to the Blood Alcohol Content Calculator! Enter your stats to begin, then add drinks and check your BAC!"];
+    //[self sendAlert: @"Welcome!": @"Welcome to the Blood Alcohol Content Calculator! Enter your stats to begin, then add drinks and check your BAC!"];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

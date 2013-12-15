@@ -41,7 +41,8 @@
     gender = -1;
     weight = 0;
     age = 0;
-    drinks = 0;
+    drinkCount = 0;
+    startTime = 0;
     hours = 0;
     goodData = FALSE;
     bac = 0;
@@ -51,8 +52,9 @@
 - (NSInteger)getGender{ return gender; }
 - (double)getWeight{ return weight; }
 - (double)getAge{ return age; }
-- (double)getDrinks{ return drinks; }
+- (double)getDrinkCount{ return drinkCount; }
 - (double)getHours{ return hours; }
+- (NSDate *)getStartTime{ return startTime; }
 - (float)getBAC{ return bac; }
 - (NSString*)getDrunkenness{ return drunkenness; }
 
@@ -126,7 +128,7 @@
         if (gender == 0) genderConstant = 0.55;
         if (gender == 1) genderConstant = 0.68;
     
-        bac = drinks * 6 * 1.055/weight * genderConstant - (0.015 * hours);
+        bac = drinkCount * 6 * 1.055/weight * genderConstant - (0.015 * hours);
     }
     else{
         bac = 0;
@@ -140,10 +142,16 @@
     age = newAge;
 }
 
-- (void) updateDrinksAndHours:(double)newDrinks :(double)newHours{
+- (void) updateDrinksAndHours:(double)newDrink :(NSDate *)currentTime{
     NSLog(@"MADTabViewController - updateDrinksAndHours");
-    drinks = newDrinks;
-    hours = newHours;
+    //get startTime
+    if (startTime == 0) startTime = currentTime;
+    else{
+        //get the difference between the start time and the current time and set hours to that
+        NSTimeInterval secondsBetween = [currentTime timeIntervalSinceDate:startTime];
+        hours = secondsBetween/3600;
+    }
+    drinkCount += newDrink;
 }
 
 - (void)didReceiveMemoryWarning{

@@ -12,7 +12,8 @@
     NSInteger gender; // -1: not selected, 0: male, 1: female
     double weight;
     double age;
-    double drinks;
+    double drinkCount;
+    NSDate * startTime;
     double hours;
     BOOL goodData; //TRUE if all the stats data is good for calculations, FALSE is it is not
     float bac;
@@ -23,19 +24,20 @@
 - (NSInteger)getGender;
 - (double)getWeight;
 - (double)getAge;
-- (double)getDrinks;
+- (double)getDrinkCount;
 - (double)getHours;
+- (NSDate *)getStartTime;
 - (float)getBAC;
 - (NSString*)getDrunkenness;
-
 - (BOOL)checkForData;
 - (BOOL)checkWeight;
 - (BOOL)checkAge;
 - (BOOL)checkData;
 
 - (void)updateStats: (NSInteger)newGender : (double)newWeight : (double)newAge;
-- (void)updateDrinksAndHours: (double)newDrinks : (double)newHours;
+- (void)updateDrinksAndHours: (double)newDrink : (NSDate *)currentTime;
 - (void)updateBAC;
 - (void)updateDrunkenness: (double)currentBac;
 
+- (void) sendAlert:(NSString *) alertTitle : (NSString *) alertMessage;
 @end

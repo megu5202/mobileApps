@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *genderOut;
 @property (weak, nonatomic) IBOutlet UILabel *weightOut;
 @property (weak, nonatomic) IBOutlet UILabel *ageOut;
-@property (weak, nonatomic) IBOutlet UILabel *drinksOut;
+@property (weak, nonatomic) IBOutlet UILabel *drinkCountOut;
 @property (weak, nonatomic) IBOutlet UILabel *hoursOut;
 @property (weak, nonatomic) IBOutlet UILabel *bacOut;
 @property (weak, nonatomic) IBOutlet UILabel *drunkennessOut;

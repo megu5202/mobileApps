@@ -120,7 +120,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="hds-lr-f3z" detailTextLabel="fzV-dQ-VHl" style="IBUITableViewCellStyleValue1" id="8jT-9F-yuH">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="hds-lr-f3z" detailTextLabel="Fxb-gS-Fmt" style="IBUITableViewCellStyleValue1" id="8jT-9F-yuH">
                                         <rect key="frame" x="0.0" y="91" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -132,7 +132,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-dQ-VHl">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxb-gS-Fmt">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,10 +149,11 @@
                             <outlet property="delegate" destination="wQW-18-SvH" id="2q6-Jk-HhV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XsJ-UV-jhX"/>
+                    <navigationItem key="navigationItem" id="XsJ-UV-jhX">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="4bw-XN-TaS"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="continentName" destination="B0Y-5f-8Qu" id="9rr-px-k8M"/>
-                        <outlet property="countryNumber" destination="fzV-dQ-VHl" id="UxE-yv-BMe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ib-45-7zx" userLabel="First Responder" sceneMemberID="firstResponder"/>

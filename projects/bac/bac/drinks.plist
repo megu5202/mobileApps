@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Beer</key>
+	<array>
+		<string>Dogfish Head 90 Minute IPA</string>
+		<string>Dogfish Head 60 Minute IPA</string>
+		<string>Sierra Nevada Pale Ale</string>
+		<string>Guiness Draught</string>
+		<string>Stone Arrogant Bastard Ale</string>
+		<string>Rogue Dead Guy Ale</string>
+		<string>New Belgium Fat Tire</string>
+		<string>Samuel Adams Octoberfest</string>
+		<string>Magic Hat #9</string>
+		<string>Samuel Adams Boston Lager</string>
+		<string>Stone IPA</string>
+	</array>
+	<key>Favorites</key>
+	<array>
+		<string>Lefthand Sawtooth</string>
+		<string>Lefthand Oktoberfest</string>
+		<string>Upslope Christmas Ale</string>
+	</array>
+	<key>Mixed Drinks</key>
+	<array>
+		<string>Screwdriver</string>
+		<string>White Russian</string>
+		<string>Whiskey and Cola</string>
+		<string>Mimosa</string>
+		<string>Mojito</string>
+		<string>Margarita</string>
+		<string>Whiskey Sour</string>
+		<string>Bloody Mary</string>
+	</array>
+	<key>Shots</key>
+	<array>
+		<string>Jack Daniels Whiskey</string>
+		<string>Jack Daniels Honey Whiskey</string>
+		<string>Malibu White Rum</string>
+		<string>Jose Cuervo Tequila</string>
+	</array>
+	<key>Wine</key>
+	<array>
+		<string>Bogle Old Vine Zinfandel</string>
+		<string>Blackstone Winery CA Merlot</string>
+		<string>Geyser Peak CA Sauvignon Blanc</string>
+		<string>Hogue Cellars Columbia Valley Riesling</string>
+		<string>King Estate OR Pinot Gris</string>
+		<string>Pepperwood Grove CA Merlot</string>
+		<string>Ravenswood Lodi Zinfandel</string>
+		<string>Rodney Strong Sonoma County Chardonnay</string>
+	</array>
+</dict>
+</plist>
