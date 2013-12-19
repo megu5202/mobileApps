@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Beer</key>
+	<string>beer.png</string>
+	<key>Wine</key>
+	<string>wine.png</string>
+	<key>Mixed Drink</key>
+	<string>cocktail.png</string>
+	<key>Shot</key>
+	<string>cocktail.png</string>
+</dict>
+</plist>
